@@ -21,7 +21,11 @@
 
 
   <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/css/mobile_view.css">
+  <link rel="stylesheet" href="/css/medium_view.css">
   <script src="/javascript/modal.js"></script>
+
+  <link rel="icon" href="/img/favicon.png" type="image/x-icon">
 
 
 
@@ -36,7 +40,7 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark row">
       <div class="container-fluid">
-        <a class="navbar-brand Proxima" style="font-size: 2.0rem; margin-right: 4rem;" href="#">Linux <span
+        <a class="navbar-brand Proxima" style="font-size: 2.0rem; margin-right: 4rem;" href="/index.html">Linux <span
             class="coder">Coder</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,28 +49,32 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active graphik" aria-current="page" href="#">Home</a>
+              <a class="nav-link active graphik" aria-current="page" href="/index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link graphik" href="#">Services</a>
+              <a class="nav-link graphik" href="/index.html#features">Specialities</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link graphik" href="#">Portfolio</a>
+              <a class="nav-link graphik" href="/index.html#project-1">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link graphik" href="#">Contact</a>
+              <a class="nav-link graphik" href="/index.html#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link graphik" href="/index.html#contact">Contact</a>
 
             </li>
 
             <!-- Search box -->
-
           </ul>
-          <form id="#searchform" class="d-flex">
-            <input style="width: 65%;" class="form-control me-2 ms-auto" type="search" placeholder="Search"
-              aria-label="Search">
-            <button class="btn btn-outline-light cont" type="submit"><i
-                class="cube bi bi-search icon-white"></i></button>
-          </form>
+          <span class="d-none d-lg-block">
+            <form id="#searchform" class="d-flex">
+              <input style="width: 65%;" class="form-control me-2 ms-auto search-query" type="search"
+                placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light cont" type="submit"><i
+                  class="cube bi bi-search icon-white"></i></button>
+            </form>
+          </span>
         </div>
       </div>
     </nav>
@@ -107,7 +115,7 @@
 
 
   <!-- Start of  Features -->
-  <div style="background-color: #E7E7E7;" class="container-middle-center-fluid">
+  <div id="features" style="background-color: #E7E7E7;" class="container-middle-center-fluid">
 
     <section style="padding: 0;">
 
@@ -119,58 +127,97 @@
             <!-- <svg class="bi text-muted flex-shrink-0 me-3" width="1.75em" height="1.75em">
               <use href="/img/cart.png">
             </svg> -->
-            <img width="80px" height="auto" style="margin-right: 50px; margin-right: 50px;" src="/img/cart.png" alt="">
+            <img class="d-none d-lg-block" width="120px" height="auto" style="margin-right: 50px; margin-right: 50px;"
+              src="/img/cart.png" alt="">
 
 
             <div>
-              <h4 class="fw-bold mb-0">ECOMMERCE</h4>
-              <p>Integration of eCommerce platforms, payment gateways, custom product templates, and more.</p>
+              <h4 class="fw-bold mb-0 mobile-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-cart2 d-lg-none mobile-icon" viewBox="0 0 16 16">
+                  <path
+                    d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                </svg>ECOMMERCE</h4>
+              <p class="d-none d-md-block">Integration of eCommerce platforms, payment gateways, custom product
+                templates, and more.</p>
             </div>
           </div>
           <div class="col d-flex align-items-center column-custom">
-            <img width="80px" height="auto" style="margin-right: 50px; margin-right: 50px;" src="/img/analytics.png"
-              alt="">
+            <img class="d-none d-lg-block" width="120px" height="auto" style="margin-right: 50px; margin-right: 50px;"
+              src="/img/analytics.png" alt="">
             <div>
-              <h4 class="fw-bold mb-0">ANALYTICS</h4>
-              <p>Get insights into who is browsing your site so that you can make smarter business decisions.</p>
+              <h4 class="fw-bold mb-0 mobile-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-clipboard2-data-fill mobile-icon" viewBox="0 0 16 16">
+                  <path
+                    d="M10 .5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5.5.5 0 0 1-.5.5.5.5 0 0 0-.5.5V2a.5.5 0 0 0 .5.5h5A.5.5 0 0 0 11 2v-.5a.5.5 0 0 0-.5-.5.5.5 0 0 1-.5-.5Z" />
+                  <path
+                    d="M4.085 1H3.5A1.5 1.5 0 0 0 2 2.5v12A1.5 1.5 0 0 0 3.5 16h9a1.5 1.5 0 0 0 1.5-1.5v-12A1.5 1.5 0 0 0 12.5 1h-.585c.055.156.085.325.085.5V2a1.5 1.5 0 0 1-1.5 1.5h-5A1.5 1.5 0 0 1 4 2v-.5c0-.175.03-.344.085-.5ZM10 7a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7Zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1Zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0V9a1 1 0 0 1 1-1Z" />
+                </svg>ANALYTICS</h4>
+              <p class="d-none d-md-block">Get insights into who is browsing your site so that you can make smarter
+                business decisions.</p>
             </div>
+
+
           </div>
           <div class="col d-flex align-items-center column-custom">
-            <img width="80px" height="auto" style="margin-right: 50px; margin-right: 50px;"
+            <img class="d-none d-lg-block" width="120px" height="auto" style="margin-right: 50px; margin-right: 50px;"
               src="/img/mobile_friendly.png" alt="">
 
             <div>
-              <h4 class="fw-bold mb-0">MOBILE-FRIENDLY</h4>
-              <p>A responsive design makes your website accessible to all users, regardless of their device.</p>
+              <h4 class="fw-bold mb-0 mobile-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-phone d-lg-none mobile-icon" viewBox="0 0 16 16">
+                  <path
+                    d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h6zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H5z" />
+                  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                </svg>MOBILE-FRIENDLY</h4>
+              <p class="d-none d-md-block">A responsive design makes your website accessible to all users, regardless of
+                their device.</p>
+            </div>
+
+
+
+          </div>
+          <div class="col d-flex align-items-center column-custom">
+            <img class="d-none d-lg-block" width="120px" height="auto" style="margin-right: 50px; margin-right: 50px;"
+              src="/img/content management.png" alt="">
+
+            <div>
+              <h4 class="fw-bold mb-0 mobile-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-kanban-fill mobile-icon" viewBox="0 0 16 16">
+                  <path
+                    d="M2.5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11zm5 2h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm-5 1a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm9-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" />
+                </svg>CONTENT MANAGEMENT</h4>
+              <p class="d-none d-md-block">Custom WordPress theme and plugin development. Easily update content without
+                knowing how to code.</p>
             </div>
           </div>
           <div class="col d-flex align-items-center column-custom">
-            <img width="80px" height="auto" style="margin-right: 50px; margin-right: 50px;"
-              src="/img/content_management.jpg" alt="">
+            <img class="d-none d-lg-block" width="120px" height="auto" style="margin-right: 50px; margin-right: 50px;"
+              src="/img/design_developemt.png" alt="">
 
             <div>
-              <h4 class="fw-bold mb-0">CONTENT MANAGEMENT</h4>
-              <p>Custom WordPress theme and plugin development. Easily update content without knowing how to code.</p>
-            </div>
-          </div>
-          <div class="col d-flex align-items-center column-custom">
-            <img width="80px" height="auto" style="margin-right: 50px; margin-right: 50px;" src="/img/New Project.png"
-              alt="">
-
-            <div>
-              <h4 class="fw-bold mb-0">DESIGN + DEVELOPMENT</h4>
-              <p>Clean, modern designs - optimized for performance, search engines, and converting users to customers.
+              <h4 class="fw-bold mb-0 mobile-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-file-earmark-code-fill mobile-icon viewBox=" 0 0 16 16">
+                  <path
+                    d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM6.646 7.646a.5.5 0 1 1 .708.708L5.707 10l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 10 8.646 8.354a.5.5 0 1 1 .708-.708z" />
+                </svg>DESIGN + DEVELOPMENT</h4>
+              <p class="d-none d-md-block">Clean, modern designs - optimized for performance, search engines, and
+                converting users to customers.
               </p>
             </div>
           </div>
 
           <div class="col d-flex align-items-center column-custom">
-            <img width="80px" height="auto" style="margin-right: 50px; margin-right: 50px;"
-              src="/img/website_audits.jpg" alt="">
+            <img class="d-none d-lg-block" width="120px" height="auto" style="margin-right: 50px; margin-right: 50px;"
+              src="/img/website_audits.png" alt="">
 
             <div>
-              <h4 class="fw-bold mb-0">WEBSITE AUDITS</h4>
-              <p>Looking to improve your page performance, SEO, or user experience? Reques a free site audit.</p>
+              <h4 class="fw-bold mb-0 mobile-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-browser-chrome mobile-icon" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M16 8a8.001 8.001 0 0 1-7.022 7.94l1.902-7.098a2.995 2.995 0 0 0 .05-1.492A2.977 2.977 0 0 0 10.237 6h5.511A8 8 0 0 1 16 8ZM0 8a8 8 0 0 0 7.927 8l1.426-5.321a2.978 2.978 0 0 1-.723.255 2.979 2.979 0 0 1-1.743-.147 2.986 2.986 0 0 1-1.043-.7L.633 4.876A7.975 7.975 0 0 0 0 8Zm5.004-.167L1.108 3.936A8.003 8.003 0 0 1 15.418 5H8.066a2.979 2.979 0 0 0-1.252.243 2.987 2.987 0 0 0-1.81 2.59ZM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                </svg>WEBSITE AUDITS</h4>
+              <p class="d-none d-md-block">Looking to improve your page performance, SEO, or user experience? Reques a
+                free site audit.</p>
             </div>
           </div>
 
@@ -227,7 +274,9 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-green btn-sm px-4 me-md-2" data-bs-dismiss="modal"><span
-                        class="ele"><a style="text-decoration: none; color: inherit;" href=""> Vist </a></span></button>
+                        class="ele"><a style="text-decoration: none; color: inherit;"
+                          href="https://effortless-caramel-0cc6ca.netlify.app/" target="__blank"> Vist
+                        </a></span></button>
                     <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Visit</button> -->
                     <!-- <button type="button" class="btn btn-primary">Understood</button> -->
                   </div>
@@ -328,7 +377,7 @@
   </div> -->
 
 
-  <div class="d-flex justify-content-center" style="background-color: #212529;">
+  <div id="pricing" class="d-flex justify-content-center" style="background-color: #212529;">
     <div style="padding-top: 48px; width: 70%; background-color: #212529;">
       <p class="text-center text-white"
         style="padding-top: 48px; padding-bottom: 48px; font-weight: bold; font-size: x-large;">
@@ -339,9 +388,9 @@
           <thead>
             <tr>
               <th style="width: 34%;"></th>
-              <th style="width: 22%;">Free</th>
-              <th class="icon-pro" style="width: 22%;">Pro</th>
-              <th class="icon-enterprise" style="width: 22%;">Enterprise</th>
+              <th style="width: 22%;">Basic</th>
+              <th class="icon-pro" style="width: 22%;">Standard</th>
+              <th class="icon-enterprise" style="width: 22%;">Premium</th>
             </tr>
           </thead>
           <!-- <tbody>
@@ -642,7 +691,7 @@
 
 
   <!-- Start of Getintouch -->
-  <div class="d-flex justify-content-center">
+  <div id="contact" class="d-flex justify-content-center">
     <div style="width: 35%;">
       <p class="h1 text-center" style="padding-top: 48px; padding-bottom: 20px;">Get in Touch</p>
       <label for="exampleFormControlInput1" class="form-label light-font">Plan (Optional)</label>
@@ -675,17 +724,22 @@
 
 
   <footer class="bd-footer py-5 mt-5 bg-dark">
-    <div class="container py-5">
+    <div class="mobile-footer-padding container py-5">
       <div class="row">
         <div class="col-lg-3 mb-3">
           <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
             aria-label="Bootstrap">
-
-            <a class="navbar-brand Proxima text-white" style="font-size: 2.0rem; margin-right: 4rem;" href="#">Linux
-              <span class="coder">Coder</span></a>
+            <div class="footer-mobile-text">
+              <a class="navbar-brand Proxima text-white" style="font-size: 2.0rem; margin-right: 4rem;" href="#">Linux
+                <span class="coder"> Coder</span>
+              </a>
+              <p class="text-white footer-mobile-text"> © 2022 Company, Inc</p>
+            </div>
           </a>
-          <ul class="list-unstyled small text-muted">
-            <li class="mb-2 text-white">Hi, I'm Linux Coder, a Full-Stack Developer<br> with over 5 years of experience
+          <ul class=" list-unstyled small text-muted">
+            <li class="mb-2 text-white d-none d-lg-block">Hi, I'm Linux Coder, a Full-Stack Developer<br> with over 5
+              years of
+              experience
               building web applications for businesses of all sizes.
               <!-- <li class="mb-2 text-white">Hi, I'm Linux Coder, a Full-Stack Developer with over 5 years of experience building web applications for businesses of all sizes<a
                 href="/docs/{{ .Site.Params.docs_version }}/about/team/">Bootstrap team</a> with the help of <a
@@ -699,7 +753,7 @@
             <li class="mb-2"></li>
           </ul>
         </div>
-        <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+        <div class="col-6 col-lg-2 offset-lg-1 mb-3 d-none d-lg-block">
           <h5 class="text-white">Links</h5>
           <ul class="list-unstyled">
             <li class="mb-2 text-white"><a href="/">Home</a></li>
@@ -709,7 +763,7 @@
             <!-- <li class="mb-2 text-white"><a href="{{ .Site.Params.blog }}">Blog</a></li> -->
           </ul>
         </div>
-        <div class="col-6 col-lg-2 mb-3">
+        <div class="col-6 col-lg-2 mb-3 d-none d-lg-block">
           <h5 class="text-white">Guides</h5>
           <ul class="list-unstyled">
             <!-- <li class="mb-2 text-white"><a href="/docs/{{ .Site.Params.docs_version }}/getting-started/">Getting
@@ -723,7 +777,7 @@
                 href="/docs/{{ .Site.Params.docs_version }}/getting-started/parcel/">Parcel</a></li> -->
           </ul>
         </div>
-        <div class="col-6 col-lg-2 mb-3">
+        <div class="col-6 col-lg-2 mb-3 d-none d-lg-block">
           <h5 class="text-white">Projects</h5>
           <ul class="list-unstyled">
             <li class="mb-2 text-white"><a href="project-1">Bootstrap.inspired.com</a></li>
@@ -735,7 +789,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-lg-2 mb-3">
+        <div class="col-6 col-lg-2 mb-3 d-none d-lg-block">
           <h5 class="text-white">Community</h5>
           <ul class="list-unstyled">
             <li class="mb-2 text-white"><a href="{{ .Site.Params.github_org }}/bootstrap/issues">Discord</a></li>
@@ -790,12 +844,7 @@
 
 
   <!-- javascript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-    crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
